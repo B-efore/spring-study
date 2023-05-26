@@ -39,14 +39,4 @@ public class ItemServiceImpl implements ItemService{
     public Collection<Item> findAllItem() {
         return memoryItemRepository.findAllItem();
     }
-
-    @Override
-    public void printMenu(Collection<Item> items) {
-        System.out.println("\n*** 구매할 메뉴의 번호를 입력해주세요 ***");
-        for (Item i : items) {
-            System.out.println(i.getItemId() + ". " + i.getItemName() + " " + i.getItemPrice() + "원");
-        }
-        System.out.println("- 구매 종료는 0번을 입력하세요.");
-        System.out.print(">> ");
-    }
 }

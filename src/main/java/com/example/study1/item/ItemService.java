@@ -14,6 +14,5 @@ public interface ItemService {
     Item findItem(Long itemId);
     // 전체 아이템 조회
     Collection<Item> findAllItem();
-    // 메뉴 출력
-    void printMenu(Collection<Item> items);
+
 }

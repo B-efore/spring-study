@@ -32,20 +32,4 @@ public class OrderServiceImpl implements OrderService {
 
         return new Order(memberId, itemList, totalPrice, discountPrice);
     }
-
-    @Override
-    public void printOrder(Order order) {
-        System.out.println("\n*** 사용자 주문 내역 ***");
-        for (Item i : order.getItemList()) {
-            System.out.println(i.getItemName() + " " + i.getItemPrice() + "원");
-        }
-        int totalPrice = order.getTotalPrice();
-        int discountPrice = order.getDiscountPrice();
-        int result = totalPrice - discountPrice;
-        System.out.println("***");
-        System.out.println("전체 금액 : " + totalPrice);
-        System.out.println("할인 금액 : " + discountPrice);
-        System.out.println("***");
-        System.out.println("최종 금액 : " + result);
-    }
 }
